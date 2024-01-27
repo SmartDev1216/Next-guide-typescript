@@ -24,6 +24,7 @@
     "styled-components": "^6.1.8",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2",
+    "use-debounce": "^10.0.0",
     "yarn": "^1.22.21",
     "zod": "^3.22.2"
   },
