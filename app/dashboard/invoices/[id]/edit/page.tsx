@@ -2,7 +2,7 @@ import Form from '@/app/ui/invoices/edit-form'
 import Broudcrumbs from '@/app/ui/invoices/breadcrumbs'
 import {fetchInvoiceById, fetchCustomers } from '@/app/lib/data'
 import { customers } from '@/app/lib/placeholder-data'
-
+import { notFound } from 'next/navigation'
 
 
 export default async function page({params} : {params:{id:string}}) {
@@ -13,6 +13,9 @@ export default async function page({params} : {params:{id:string}}) {
         fetchInvoiceById(id),
         fetchCustomers()
     ])
+    if(!invoice){
+        notFound()
+    }
   return (
     <main>
         <Broudcrumbs
