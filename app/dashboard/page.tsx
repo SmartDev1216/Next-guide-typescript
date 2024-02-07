@@ -11,6 +11,11 @@ import {
 } from '@/app/lib/data'
 import { Suspense } from "react"
 import { LatestInvoicesSkeleton, RevenueChartSkeleton,CardSkeleton } from "../ui/skeletons"
+import { Metadata } from "next"
+
+export const metadata : Metadata = {
+  title:'Dashboard'
+}
 
 export default async function Page() {
   
